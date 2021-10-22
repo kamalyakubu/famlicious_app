@@ -1,4 +1,5 @@
 import 'package:famlicious_app/views/auth/create_account_view.dart';
+import 'package:famlicious_app/views/auth/login_view.dart';
 import 'package:famlicious_app/views/home/home_view.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
@@ -10,11 +11,11 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(
-    // DevicePreview(
-    //   enabled: !kReleaseMode,
-    //   builder: (context) => const MyApp(),
-    // ),
-MyApp()  );
+      // DevicePreview(
+      //   enabled: !kReleaseMode,
+      //   builder: (context) => const MyApp(),
+      // ),
+      const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: const Color.fromRGBO(249, 251, 252, 1),
         cardColor: Colors.white,
         appBarTheme: const AppBarTheme(
+          iconTheme: IconThemeData(color: Colors.black),
           backgroundColor: Colors.white,
           elevation: 0,
           actionsIconTheme: IconThemeData(color: Colors.black),
@@ -49,9 +51,8 @@ class MyApp extends StatelessWidget {
           labelStyle: TextStyle(color: Colors.black),
         ),
         buttonTheme: const ButtonThemeData(
-          colorScheme: ColorScheme.dark(primary: Colors.white),
-          textTheme: ButtonTextTheme.primary
-        ),
+            colorScheme: ColorScheme.dark(primary: Colors.white),
+            textTheme: ButtonTextTheme.primary),
       ),
       darkTheme: ThemeData(
         textTheme: const TextTheme(
@@ -78,14 +79,12 @@ class MyApp extends StatelessWidget {
           ),
           labelStyle: TextStyle(color: Colors.black),
         ),
-
-          buttonTheme: const ButtonThemeData(
-          colorScheme: ColorScheme.light(primary: Colors.black),
-          textTheme: ButtonTextTheme.primary
-        ),
+        buttonTheme: const ButtonThemeData(
+            colorScheme: ColorScheme.light(primary: Colors.black),
+            textTheme: ButtonTextTheme.primary),
       ),
       themeMode: ThemeMode.system,
-      home:  CreateAccountView(),
+      home: HomeView(),
     );
   }
 }
