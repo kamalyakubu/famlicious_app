@@ -123,7 +123,7 @@ class _CreatePostViewState extends State<CreatePostView> {
                               selectImage(ImageSource.gallery);
                             },
                             icon: const Icon(UniconsLine.picture),
-                            label: const Text('Select from Gallery')),
+                            label: const Text('Select from Gallery'),),
                       ],
                     );
                   });
