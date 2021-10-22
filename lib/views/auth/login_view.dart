@@ -34,9 +34,11 @@ class _LoginViewState extends State<LoginView> {
         child: ListView(
           padding: const EdgeInsets.all(16),
           children: [
-            const FlutterLogo(
-              size: 130,
-            ),
+            // const FlutterLogo(
+            //   size: 130,
+            // ),
+
+            Image.asset('assets/logo.jpg', height: 200, width: 200,),
             const SizedBox(
               height: 35,
             ),
